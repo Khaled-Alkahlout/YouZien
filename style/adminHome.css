@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    background-color: #202020;
+}
+.pageHeader {
+    width: 100%;
+    background-color: #333;
+}
+ul {
+    margin-top: 2%;
+    padding: 1.5%;
+}
+li {
+    display: inline;
+    list-style-type: none;
+    color: #f1f1f1;
+    font-weight: bold;
+    font-size: 200%;
+}
+.WebsiteName {
+    padding: 1%;
+}
+.Uitloggen {
+    padding-left: 80%;
+    font-weight: lighter;
+    font-size: 150%;
+    cursor: pointer;
+}
+.Video {
+    padding-top: 2%;
+    width: 1800px;
+    height: 600px;
+    margin-left: 2.7%;
+}
+.videoTitle {
+    font-size: 150%;
+    color: #f1f1f1;
+    margin-left: 2.7%;
+}
+.vastgesteldeVideoWoord {
+    font-size: 120%;
+    color: #f1f1f1;
+    margin-left: 2.7%;
+    margin-top: 3%;
+}
+.vastgesteldeVideos {
+    width: 300px;
+}
+table {
+    margin-left: 2.2%;
+}
+td {
+    padding: 8px;
+    width: 50%;
+}
+.vastgesteldeVideoTitle {
+    font-size: 130%;
+    color: #f1f1f1;
+    margin-left: 7%;
+}
+button {
+    margin-left: 45%;
+    margin-top: 1.5%;
+    width: 10%;
+    color: #f1f1f1;
+    background-color: #333;
+    cursor: pointer;
+    border-radius: 10%;
+    font-size: 150%;
+}
+footer {
+    margin-top: 4.2%;
+    padding: 1.5%;
+    font-size: 120%;
+    text-align: center;
+    color: #f1f1f1;
+    background-color: #333;
+}
+@media only screen and (max-width: 600px) {
+    li {
+        font-size: 150%;
+    }
+    .pageHeader {
+        margin-top: 5%;
+    }
+    .Uitloggen {
+        padding-left: 70%;
+    }
+    .Video {
+        width: 400px;
+        height: 200px;
+        margin-left: 1.5%;
+    }
+    .videoTitle {
+        font-size: 120%;
+    }
+    .vastgesteldeVideoWoord {
+        font-size: 100%;
+    }
+    .vastgesteldeVideos {
+        width: 180px;
+    }
+    table {
+        margin-left: 1%;
+    }
+    button {
+        display: none;
+    }
+}

@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    background-color: #202020;
+}
+.pageHeader {
+    width: 100%;
+    background-color: #333;
+}
+ul {
+    margin-top: 2%;
+    padding: 1.5%;
+}
+li {
+    display: inline;
+    list-style-type: none;
+    color: #f1f1f1;
+    font-weight: bold;
+    font-size: 200%;
+}
+.WebsiteName {
+    padding: 1%;
+}
+.Terug {
+    font-size: 150%;
+    margin-left: 83%;
+    cursor: pointer;
+}
+.Edit {
+    width: 20%;
+    margin: auto;
+    margin-top: 12%;
+    background-color: #333;
+}
+.EditWoord {
+    font-size: 150%;
+    padding-top: 10%;
+    margin-left: 40%;
+    color: #f1f1f1;
+}
+label {
+    font-size: 120%;
+    margin-left: 30%;
+    color: #f1f1f1;
+}
+.Inputveld {
+    margin-left: 29.5%;
+}
+.Editbutton {
+    font-size: 120%;
+    width: 20%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    margin-left: 42%;
+    color: #f1f1f1;
+    border: #4b4a4a;
+    background-color: #4b4a4a;
+    cursor: pointer;
+}
+footer {
+    margin-top: 11.4%;
+    padding: 1.5%;
+    font-size: 120%;
+    text-align: center;
+    color: #f1f1f1;
+    background-color: #333;
+}

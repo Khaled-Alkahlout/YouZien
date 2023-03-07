@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    background-color: #202020;
+}
+.pageHeader {
+    width: 100%;
+    background-color: #333;
+}
+ul {
+    margin-top: 2%;
+    padding: 1.5%;
+}
+li {
+    display: inline;
+    list-style-type: none;
+    color: #f1f1f1;
+    font-weight: bold;
+    font-size: 200%;
+}
+.WebsiteName {
+    padding: 1%;
+}
+.Login {
+    width: 20%;
+    margin: auto;
+    margin-top: 9%;
+    background-color: #333;
+}
+.Inloggen {
+    font-size: 200%;
+    font-weight: bold;
+    color: #f1f1f1;
+    text-align: center;
+    padding-top: 9%;
+}
+.Inputvelden {
+    margin-left: 27%;
+    color: #f1f1f1;
+}
+.LogInbutton {
+    margin-left: 39%;
+    font-size: 120%;
+    color: #f1f1f1;
+    border: #4b4a4a;
+    background-color: #4b4a4a;
+    cursor: pointer;
+}
+.WachtwoordVergetenVraag {
+    margin-left: 27%;
+    font-size: 120%;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+.RegisterenVraag {
+    margin-left: 27%;
+    padding-bottom: 10%;
+    font-size: 120%;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+footer {
+    margin-top: 7.9%;
+    padding: 1.5%;
+    font-size: 120%;
+    text-align: center;
+    color: #f1f1f1;
+    background-color: #333;
+}
+@media only screen and (max-width: 600px) {
+    .pageHeader {
+        margin-top: 5%;
+    }
+    .Login {
+        width: 70%;
+        margin-top: 27%;
+    }
+    .Inputvelden {
+        margin-left: 20%;
+    }
+    .LogInbutton {
+        margin-left: 38%;
+        font-size: 110%;
+    }
+    .WachtwoordVergetenVraag {
+        margin-left: 24%;
+        font-size: 110%;
+    }
+    .RegisterenVraag {
+        margin-left: 24%;
+        margin-bottom: 47%;
+        font-size: 110%;
+    }
+    .Copyright {
+        margin-top: 1%;
+    }
+}

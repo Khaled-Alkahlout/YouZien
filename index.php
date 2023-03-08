@@ -9,6 +9,9 @@
     <title>YouZien</title>
 </head>
 <header>
+<?php
+    include("Connection.php");
+?>
 <div class="pageHeader">
     <ul>
         <li><i class="fa-brands fa-youtube"></i></li>

@@ -19,17 +19,50 @@
 <body>
     <div class="Login">
         <p class="Inloggen">Inloggen</p>
-        <form>
-        <label class="Inputvelden">Gebruikersnaam</label>
+        <form method="POST" action="">
+        <label>Gebruikersnaam</label>
         <br>
-        <Input type="text" class="Inputvelden" name="Gebruikersnaam"/>
+        <Input type="text" name="username"/>
         <br><br>
-        <label class="Inputvelden">Wachtwoord</label>
+        <label>Wachtwoord</label>
         <br>
-        <Input type="text" class="Inputvelden" name="Wachtwoord"/>
+        <Input type="password" name="password"/>
         <br><br>
-        <Input type="submit" value="Inloggen" class="LogInbutton" name="Inloggen"/>
+        <Input type="submit" name="submit" value="Inloggen" class="LogInbutton"/>
         </form>
+        <?php
+        try {
+            include("Connection.php");
+            if(isset($_POST["submit"])) {
+                if(empty($_POST["username"]) || empty($_POST["password"])) {
+                    echo '<p style="text-align: center; color: #f1f1f1;">All field is required</p>';
+                }
+                else {
+                    $query = "SELECT * FROM loginform WHERE username = :Username AND password = :Password";
+                    $statement = $conn->prepare($query);
+                    $statement->execute(
+                        array(
+                            'Username' => $_POST["username"],
+                            'Password' => $_POST["password"]
+                        )
+                    );
+                    $count = $statement->rowCount();
+                    if($count > 0 && $_POST["username"] == "mboRijnland" && $_POST["password"] == "admin") {
+                        echo "<script>window.location.replace('adminHome.php');</script>";
+                    }
+                    else if($count > 0) {
+                        echo "<script>window.location.replace('index.php');</script>";
+                    }
+                    else {
+                        echo "<p style='text-align: center; color: #f1f1f1;'>Username or Password is wrong</p>";
+                    }
+                }
+            }
+        }
+        catch(PDOException $error) {
+            $message = $error->getMessage();
+        }
+        ?>
         <p class="WachtwoordVergetenVraag">Wachtwoord vergeten ?</p>
         <p class="RegisterenVraag">creëer je account aan ?</p>
     </div>

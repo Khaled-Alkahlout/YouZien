@@ -35,10 +35,9 @@
             include("Connection.php");
             if(isset($_POST["submit"])) {
                 if(empty($_POST["username"]) || empty($_POST["password"])) {
-                    echo '<p style="text-align: center; color: #f1f1f1;">All field is required</p>';
-                }
-                else {
-                    $query = "SELECT * FROM loginform WHERE username = :Username AND password = :Password";
+                    echo '<p style="text-align: center; color: #f1f1f1;">All fields are required</p>';
+                } else {
+                    $query = "SELECT * FROM user WHERE username = :Username AND password = :Password";
                     $statement = $conn->prepare($query);
                     $statement->execute(
                         array(
@@ -46,20 +45,19 @@
                             'Password' => $_POST["password"]
                         )
                     );
-                    $count = $statement->rowCount();
-                    if($count > 0 && $_POST["username"] == "mboRijnland" && $_POST["password"] == "admin") {
-                        echo "<script>window.location.replace('adminHome.php');</script>";
-                    }
-                    else if($count > 0) {
-                        echo "<script>window.location.replace('index.php');</script>";
-                    }
-                    else {
+                    $result = $statement->fetch(PDO::FETCH_ASSOC);
+                    if($result) {
+                        if ($result['is_admin'] == 1) {
+                            echo "<script>window.location.replace('adminHome.php');</script>";
+                        } else {
+                            echo "<script>window.location.replace('index.php');</script>";
+                        }
+                    } else {
                         echo "<p style='text-align: center; color: #f1f1f1;'>Username or Password is wrong</p>";
                     }
                 }
             }
-        }
-        catch(PDOException $error) {
+        } catch(PDOException $error) {
             $message = $error->getMessage();
         }
         ?>
